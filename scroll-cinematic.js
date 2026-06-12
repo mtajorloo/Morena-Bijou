@@ -6,7 +6,7 @@
    they take priority over the remote videos. */
 const HIGGSFIELD = {
   poster:      'https://d8j0ntlcm91z4.cloudfront.net/user_3F1VtchxdxeZzONSsRIyI88MO2d/hf_20260612_094739_f901916b-6d7c-443f-b6c2-81df20924b11.png',
-  spinVideo:   'HF_SPIN_URL',
+  spinVideo:   'https://d8j0ntlcm91z4.cloudfront.net/user_3F1VtchxdxeZzONSsRIyI88MO2d/hf_20260612_095948_36589f72-a47f-4260-ba8b-86e7d9cefeb0.mp4',
   revealVideo: 'https://d8j0ntlcm91z4.cloudfront.net/user_3F1VtchxdxeZzONSsRIyI88MO2d/hf_20260612_095007_0e7ba23b-36e7-48ff-9de9-66866655611a.mp4',
 };
 
