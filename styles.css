@@ -74,6 +74,14 @@ nav {
   padding: 1.8rem 4rem;
   display: flex; align-items: center; justify-content: space-between;
   mix-blend-mode: normal;
+  transition: background 0.4s ease, padding 0.4s ease, backdrop-filter 0.4s ease;
+}
+nav.scrolled {
+  background: rgba(8, 6, 8, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 1.1rem 4rem;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.1);
 }
 .nav-logo {
   font-family: var(--font-serif);
@@ -247,7 +255,21 @@ canvas.scrub-canvas {
   aspect-ratio: 3/4;
   overflow: hidden;
   cursor: pointer;
+  transition: transform 0.5s var(--ease-out);
+  transform-style: preserve-3d;
 }
+/* Light shine that follows the cursor (position set from JS) */
+.collection-card::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at var(--shine-x, 50%) var(--shine-y, 50%),
+              rgba(240, 208, 128, 0.13), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+.collection-card:hover::after { opacity: 1; }
 .collection-card-bg {
   position: absolute; inset: 0;
   transition: transform 0.9s var(--ease-out);
@@ -265,7 +287,14 @@ canvas.scrub-canvas {
   transition: transform 0.9s var(--ease-out);
 }
 .collection-card:hover .collection-gem { transform: translate(-50%, -60%) scale(1.08); }
-.collection-gem svg { width: 100%; height: 100%; }
+.collection-gem svg {
+  width: 100%; height: 100%;
+  animation: gemFloat 5s ease-in-out infinite;
+}
+@keyframes gemFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
 .collection-card-info {
   position: absolute;
   bottom: 0; left: 0; right: 0;
