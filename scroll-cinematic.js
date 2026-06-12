@@ -7,7 +7,7 @@
 const HIGGSFIELD = {
   poster:      'https://d8j0ntlcm91z4.cloudfront.net/user_3F1VtchxdxeZzONSsRIyI88MO2d/hf_20260612_094739_f901916b-6d7c-443f-b6c2-81df20924b11.png',
   spinVideo:   'HF_SPIN_URL',
-  revealVideo: 'HF_REVEAL_URL',
+  revealVideo: 'https://d8j0ntlcm91z4.cloudfront.net/user_3F1VtchxdxeZzONSsRIyI88MO2d/hf_20260612_095007_0e7ba23b-36e7-48ff-9de9-66866655611a.mp4',
 };
 
 const SCRUB_SECTIONS = [
