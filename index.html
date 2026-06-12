@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Morena Bijou — Handcrafted Jewellery · Antalya</title>
-  <meta name="description" content="Morena Bijou. Worn by the rare. Handcrafted luxury jewellery from Antalya, Türkiye — 18k gold, conflict-free stones, made by hand." />
+  <title>Morèna — Handmade Jewellery · Antalya</title>
+  <meta name="description" content="Morèna. Handmade jewellery with a young soul, from Antalya, Türkiye. Modern gold pieces made by hand, worn every day." />
   <link rel="canonical" href="https://morenabijou.com/" />
 
   <!-- Open Graph / social -->
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Morena Bijou" />
-  <meta property="og:title" content="Morena Bijou — Handcrafted Jewellery · Antalya" />
-  <meta property="og:description" content="Worn by the rare. Handcrafted luxury jewellery from Antalya, Türkiye." />
+  <meta property="og:site_name" content="Morèna" />
+  <meta property="og:title" content="Morèna — Handmade Jewellery · Antalya" />
+  <meta property="og:description" content="Handmade jewellery with a young soul, from Antalya, Türkiye." />
   <meta property="og:url" content="https://morenabijou.com/" />
-  <meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3F1VtchxdxeZzONSsRIyI88MO2d/hf_20260612_094739_f901916b-6d7c-443f-b6c2-81df20924b11.png" />
+  <meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3F1VtchxdxeZzONSsRIyI88MO2d/hf_20260612_105303_b76cc0c9-7dd3-47d9-923f-b50a9f91afb8.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Structured data -->
@@ -21,7 +21,8 @@
   {
     "@context": "https://schema.org",
     "@type": "JewelryStore",
-    "name": "Morena Bijou",
+    "name": "Morèna",
+    "alternateName": "Morena Bijou",
     "url": "https://morenabijou.com/",
     "email": "morenabijou@gmail.com",
     "address": { "@type": "PostalAddress", "addressLocality": "Antalya", "addressCountry": "TR" },
@@ -32,7 +33,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <!-- Lenis smooth scroll -->
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
@@ -41,193 +42,118 @@
 </head>
 <body>
 
-<!-- ─── Loading Overlay ──────────────────────────────────────────────────── -->
-<div id="loading-overlay">
-  <div class="loading-logo">Morena Bijou</div>
-  <div class="loading-bar-wrap"><div class="loading-bar"></div></div>
-  <div class="loading-pct">0%</div>
-</div>
-
 <!-- ─── Navigation ───────────────────────────────────────────────────────── -->
 <nav>
-  <a href="#" class="nav-logo">Morena <em>Bijou</em></a>
+  <a href="#" class="nav-logo">Mor<em>è</em>na</a>
   <ul class="nav-links">
     <li><a href="#collections">Collections</a></li>
-    <li><a href="#story">Atelier</a></li>
-    <li><a href="#cta">Bespoke</a></li>
+    <li><a href="#atelier">Atelier</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="#cta" class="nav-cta">Discover</a>
+  <a href="https://www.instagram.com/morena_bijou_com" target="_blank" rel="noopener" class="nav-cta">Instagram</a>
 </nav>
 
-<!-- ─── Scroll hint ───────────────────────────────────────────────────────── -->
-<div class="scroll-hint">
-  <div class="mouse"><div class="wheel"></div></div>
-  <span>Scroll</span>
+<!-- ─── HERO · full-screen 1080p film loop ──────────────────────────────── -->
+<header class="hero" id="top">
+  <video class="hero-video" autoplay muted loop playsinline
+         poster="https://d8j0ntlcm91z4.cloudfront.net/user_3F1VtchxdxeZzONSsRIyI88MO2d/hf_20260612_105303_b76cc0c9-7dd3-47d9-923f-b50a9f91afb8.png"
+         src="MB_HERO_VIDEO"></video>
+  <div class="hero-veil"></div>
+  <div class="hero-copy">
+    <p class="hero-eyebrow">Handmade in Antalya</p>
+    <h1 class="hero-headline">Jewellery<br>with a <em>young</em> soul.</h1>
+    <p class="hero-sub">Modern gold pieces, made by hand on the Turkish Riviera — and worn every single day.</p>
+    <div class="hero-actions">
+      <a href="#collections" class="btn btn-solid">See the collection</a>
+      <a href="https://www.instagram.com/morena_bijou_com" target="_blank" rel="noopener" class="btn btn-ghost">@morena_bijou_com</a>
+    </div>
+  </div>
+  <div class="hero-scroll">scroll<span></span></div>
+</header>
+
+<!-- ─── Marquee ──────────────────────────────────────────────────────────── -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Morèna ✦ handmade in Antalya ✦ gold that lives with you ✦ small batches, big love ✦ </span>
+    <span>Morèna ✦ handmade in Antalya ✦ gold that lives with you ✦ small batches, big love ✦ </span>
+  </div>
 </div>
 
-<!-- ════════════════════════════════════════════════════════════════════════ -->
-<!-- SECTION 1 · HERO SCRUB — 360° Turntable                                 -->
-<!-- ════════════════════════════════════════════════════════════════════════ -->
-<section class="scrub-section" id="hero">
-  <div class="scrub-inner">
-    <canvas class="scrub-canvas"></canvas>
-    <div class="scrub-overlay">
-      <div class="scrub-line hero-eyebrow scrub-eyebrow">Morena Bijou · SS 2025</div>
-      <div class="scrub-line hero-headline scrub-headline">Worn by<br>the Rare.</div>
-      <div class="scrub-line hero-sub scrub-sub">Handcrafted in 18k gold · Conflict-free stones</div>
-    </div>
+<!-- ─── COLLECTIONS ──────────────────────────────────────────────────────── -->
+<section class="collections" id="collections">
+  <p class="section-eyebrow reveal">The pieces</p>
+  <h2 class="section-title reveal reveal-d1">Made to be worn,<br>not <em>saved for later.</em></h2>
+
+  <div class="product-grid">
+    <a class="product-card reveal" href="https://www.instagram.com/morena_bijou_com" target="_blank" rel="noopener">
+      <div class="product-photo"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3F1VtchxdxeZzONSsRIyI88MO2d/hf_20260612_105306_4badd9f3-cbe0-4b17-9e20-d79bf4b33a0a.png" alt="Luna hoops — hammered gold hoop earrings" loading="lazy" /></div>
+      <div class="product-meta">
+        <span class="product-name">Luna Hoops</span>
+        <span class="product-note">Hammered gold · DM to order</span>
+      </div>
+    </a>
+    <a class="product-card reveal reveal-d1" href="https://www.instagram.com/morena_bijou_com" target="_blank" rel="noopener">
+      <div class="product-photo"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3F1VtchxdxeZzONSsRIyI88MO2d/hf_20260612_105308_1ea0d4a4-ffb3-475b-9e9a-f262703ba195.png" alt="Sole layers — layered gold necklaces with turquoise" loading="lazy" /></div>
+      <div class="product-meta">
+        <span class="product-name">Sole Layers</span>
+        <span class="product-note">Necklaces · DM to order</span>
+      </div>
+    </a>
+    <a class="product-card reveal reveal-d2" href="https://www.instagram.com/morena_bijou_com" target="_blank" rel="noopener">
+      <div class="product-photo"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3F1VtchxdxeZzONSsRIyI88MO2d/hf_20260612_105311_cbcf8c14-ae12-4d90-8481-5e3746a6522c.png" alt="Mare stack — mixed-finish gold rings" loading="lazy" /></div>
+      <div class="product-meta">
+        <span class="product-name">Mare Stack</span>
+        <span class="product-note">Rings · DM to order</span>
+      </div>
+    </a>
   </div>
+
+  <p class="collections-foot reveal">Every piece is made by hand in small batches — message us on
+    <a href="https://www.instagram.com/morena_bijou_com" target="_blank" rel="noopener">Instagram</a> to order or ask for a custom piece.</p>
 </section>
 
-<!-- ════════════════════════════════════════════════════════════════════════ -->
-<!-- SECTION 2 · STORY                                                        -->
-<!-- ════════════════════════════════════════════════════════════════════════ -->
-<section class="story-section" id="story">
-  <div>
-    <p class="story-label reveal">The Atelier</p>
-    <h2 class="story-headline reveal reveal-delay-1">
-      Every piece begins<br>as a quiet obsession.
-    </h2>
-    <p class="story-body reveal reveal-delay-2">
-      Morena Bijou was born in a sun-lit studio in Antalya, on the Turkish
-      Riviera, shaped by the belief that jewellery is not decoration — it is
-      declaration. Each collection is designed by hand, cast in ethically
-      sourced 18k gold, and set with stones chosen one by one for their depth
-      of colour and clarity of light.
+<!-- ─── ATELIER ──────────────────────────────────────────────────────────── -->
+<section class="atelier" id="atelier">
+  <div class="atelier-text">
+    <p class="section-eyebrow reveal">The atelier</p>
+    <h2 class="section-title reveal reveal-d1">Sun, sea &amp; <em>gold dust.</em></h2>
+    <p class="atelier-body reveal reveal-d2">
+      Morèna is a small jewellery studio in Antalya, on the Turkish Riviera.
+      Every hoop, ring and chain starts at a workbench by the window — shaped,
+      hammered and finished by hand, one piece at a time.
       <br /><br />
-      We make very little. We make it very well.
+      No mass production. No seasons rushing you. Just honest gold made for
+      people who wear their favourite things everywhere.
     </p>
+    <a href="mailto:morenabijou@gmail.com" class="btn btn-outline reveal reveal-d3">Ask about a custom piece</a>
   </div>
-  <div class="story-stats">
-    <div class="reveal">
-      <div class="stat-num">18k</div>
-      <div class="stat-label">Gold Standard</div>
-    </div>
-    <div class="reveal reveal-delay-1">
-      <div class="stat-num">47</div>
-      <div class="stat-label">Pieces per Season</div>
-    </div>
-    <div class="reveal reveal-delay-2">
-      <div class="stat-num">12</div>
-      <div class="stat-label">Master Artisans</div>
-    </div>
-    <div class="reveal reveal-delay-3">
-      <div class="stat-num">∞</div>
-      <div class="stat-label">Year Guarantee</div>
-    </div>
+  <div class="atelier-photo reveal reveal-d1">
+    <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3F1VtchxdxeZzONSsRIyI88MO2d/hf_20260612_105303_b76cc0c9-7dd3-47d9-923f-b50a9f91afb8.png" alt="Morèna jewellery worn in the Antalya sun" loading="lazy" />
   </div>
 </section>
 
-<!-- ════════════════════════════════════════════════════════════════════════ -->
-<!-- SECTION 3 · COLLECTIONS GRID                                             -->
-<!-- ════════════════════════════════════════════════════════════════════════ -->
-<section class="collections-section" id="collections">
-  <p class="section-label reveal">Our Collections</p>
-  <h2 class="section-title reveal reveal-delay-1">Three worlds.<br>One vision.</h2>
-
-  <div class="collections-grid">
-
-    <!-- Noir Collection -->
-    <div class="collection-card reveal">
-      <div class="collection-card-bg noir"></div>
-      <div class="collection-gem">
-        <svg viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <polygon points="40,2 78,28 78,72 40,98 2,72 2,28" fill="#9B1B30" fill-opacity="0.7"/>
-          <polygon points="40,2 78,28 40,50" fill="#E0405A" fill-opacity="0.5"/>
-          <polygon points="40,2 2,28 40,50"  fill="#C9A84C" fill-opacity="0.3"/>
-          <polygon points="40,50 78,28 78,72" fill="#9B1B30" fill-opacity="0.9"/>
-          <polygon points="40,50 2,28 2,72"   fill="#7A1020" fill-opacity="0.9"/>
-          <polygon points="40,50 78,72 40,98" fill="#6A0E1A" fill-opacity="0.8"/>
-          <polygon points="40,50 2,72 40,98"  fill="#8B1525" fill-opacity="0.8"/>
-        </svg>
-      </div>
-      <div class="collection-card-info">
-        <div class="card-name">Noir Rouge</div>
-        <div class="card-pieces">14 Pieces · Ruby &amp; Onyx</div>
-      </div>
-    </div>
-
-    <!-- Ember Collection -->
-    <div class="collection-card reveal reveal-delay-1">
-      <div class="collection-card-bg ember"></div>
-      <div class="collection-gem">
-        <svg viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <polygon points="40,2 78,28 78,72 40,98 2,72 2,28" fill="#C9A84C" fill-opacity="0.7"/>
-          <polygon points="40,2 78,28 40,50" fill="#F0D080" fill-opacity="0.7"/>
-          <polygon points="40,2 2,28 40,50"  fill="#E8C060" fill-opacity="0.5"/>
-          <polygon points="40,50 78,28 78,72" fill="#B89040" fill-opacity="0.9"/>
-          <polygon points="40,50 2,28 2,72"   fill="#A07830" fill-opacity="0.9"/>
-          <polygon points="40,50 78,72 40,98" fill="#8A6020" fill-opacity="0.8"/>
-          <polygon points="40,50 2,72 40,98"  fill="#966A28" fill-opacity="0.8"/>
-        </svg>
-      </div>
-      <div class="collection-card-info">
-        <div class="card-name">Brasa</div>
-        <div class="card-pieces">18 Pieces · Citrine &amp; Gold</div>
-      </div>
-    </div>
-
-    <!-- Aurora Collection -->
-    <div class="collection-card reveal reveal-delay-2">
-      <div class="collection-card-bg aurora"></div>
-      <div class="collection-gem">
-        <svg viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <polygon points="40,2 78,28 78,72 40,98 2,72 2,28" fill="#2A3580" fill-opacity="0.7"/>
-          <polygon points="40,2 78,28 40,50" fill="#6070D0" fill-opacity="0.6"/>
-          <polygon points="40,2 2,28 40,50"  fill="#8090E0" fill-opacity="0.4"/>
-          <polygon points="40,50 78,28 78,72" fill="#1A2570" fill-opacity="0.9"/>
-          <polygon points="40,50 2,28 2,72"   fill="#101860" fill-opacity="0.9"/>
-          <polygon points="40,50 78,72 40,98" fill="#0E1450" fill-opacity="0.8"/>
-          <polygon points="40,50 2,72 40,98"  fill="#121A5A" fill-opacity="0.8"/>
-        </svg>
-      </div>
-      <div class="collection-card-info">
-        <div class="card-name">Aurora</div>
-        <div class="card-pieces">15 Pieces · Sapphire &amp; Diamond</div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════════════════════════════════════ -->
-<!-- SECTION 4 · REVEAL SCRUB — Gemstone Assembly                             -->
-<!-- ════════════════════════════════════════════════════════════════════════ -->
-<section class="scrub-section" id="reveal-section">
-  <div class="scrub-inner">
-    <canvas class="scrub-canvas"></canvas>
-    <div class="scrub-overlay reveal-overlay">
-      <div class="scrub-line reveal-eyebrow scrub-eyebrow">Craftsmanship</div>
-      <div class="scrub-line reveal-headline scrub-headline">A stone<br>finds its home.</div>
-      <div class="scrub-line reveal-sub scrub-sub">Every setting is made by a single pair of hands</div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════════════════════════════════════ -->
-<!-- SECTION 5 · CTA                                                           -->
-<!-- ════════════════════════════════════════════════════════════════════════ -->
-<section class="cta-section" id="cta">
-  <p class="cta-eyebrow reveal">Commission · Collect · Cherish</p>
-  <h2 class="cta-headline reveal reveal-delay-1">Discover<br>the <em>Collection.</em></h2>
-  <p class="cta-body reveal reveal-delay-2">
-    Private appointments available at our Antalya atelier.<br>
-    Each piece arrives in a hand-stitched leather case.
+<!-- ─── CONTACT / INSTAGRAM ─────────────────────────────────────────────── -->
+<section class="contact" id="contact">
+  <p class="section-eyebrow reveal">Say hello</p>
+  <h2 class="contact-title reveal reveal-d1">
+    <a href="https://www.instagram.com/morena_bijou_com" target="_blank" rel="noopener">@morena_bijou_com</a>
+  </h2>
+  <p class="contact-sub reveal reveal-d2">
+    New pieces drop on Instagram first. For orders, custom work or anything else:
+    <a href="mailto:morenabijou@gmail.com">morenabijou@gmail.com</a>
   </p>
-  <a href="mailto:morenabijou@gmail.com" class="cta-btn reveal reveal-delay-3">Book an Appointment</a>
-  <div class="cta-divider reveal"></div>
 </section>
 
-<!-- ─── Footer ────────────────────────────────────────────────────────────── -->
+<!-- ─── Footer ───────────────────────────────────────────────────────────── -->
 <footer>
-  <div class="footer-logo">Morena Bijou</div>
-  <div class="footer-copy">© 2026 Morena Bijou · Antalya, Türkiye · morenabijou.com</div>
+  <div class="footer-logo">Mor<em>è</em>na</div>
+  <div class="footer-copy">© 2026 Morèna · Antalya, Türkiye · morenabijou.com</div>
   <ul class="footer-links">
     <li><a href="https://www.instagram.com/morena_bijou_com" target="_blank" rel="noopener">Instagram</a></li>
     <li><a href="mailto:morenabijou@gmail.com">morenabijou@gmail.com</a></li>
   </ul>
 </footer>
 
-<script src="scroll-cinematic.js"></script>
+<script src="morena.js"></script>
 </body>
 </html>
