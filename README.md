@@ -32,9 +32,9 @@ URLs in `index.html` with local paths (e.g. `assets/hero.mp4`).
 
 ## Files
 
-- `index.html` — the whole site (one page)
-- `styles.css` — design system & responsive styles
-- `morena.js` — smooth scroll, reveals, parallax, nav state
+- `index.html` — the whole site in one self-contained file (HTML + inlined
+  CSS and JS, no external libraries), so it stays fully styled even when
+  opened as a lone file
 - `CNAME` — custom domain for GitHub Pages
 - `CAFFEINE.md` — alternative: rebuild on caffeine.ai with admin/CMS features
 
