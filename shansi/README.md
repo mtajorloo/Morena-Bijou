@@ -13,7 +13,16 @@ Hourly game-of-chance website. Burgundy and gold. One flow: log in â†’ top up â†
 
 ## Caffeine deployment
 
-Caffeine AI built the full app from [`CAFFEINE_SPEC.md`](CAFFEINE_SPEC.md) (five screens, Motoko game engine with hourly `raw_rand` draws, Internet Identity + email login, demo-credit wallet, admin "Run draw now") and deployed it as a **draft**. Draft links are token-gated; the link above carries the token. To get a public URL, open the project in the Caffeine dashboard and publish the draft to live. Caffeine's automated runtime test did not complete during the build, so click through the draft once before sharing it. The follow-up message with the two Seedance video URLs was applied and redeployed.
+Caffeine AI built the full app from [`CAFFEINE_SPEC.md`](CAFFEINE_SPEC.md) (five screens, Motoko game engine with hourly `raw_rand` draws, Internet Identity + email login, demo-credit wallet, admin "Run draw now") and deployed it as a **draft**. The follow-up message with the two Seedance video URLs was applied and redeployed.
+
+| Detail | Value |
+|---|---|
+| Draft domain | `potential-purple-imk-draft.caffeine.xyz` |
+| Draft gate token (the `#t=` fragment) | `ZISJE8Wyx9p7` |
+| Draft frontend canister | `saxlv-eaaaa-aaaah-atbtq-cai` |
+| Draft backend canister | `rpbwc-ryaaa-aaaah-atzba-cai` |
+
+Opening the draft: use the full link including the `#t=` fragment. If the canister-login page asks for a code, enter the token above. The Caffeine dashboard's Preview button issues a fresh token if this one expires. To get a public URL, publish the draft to live from the dashboard. Caffeine's automated runtime test never completed during the builds (the QA review and regression fixes did pass), so click through the draft once before sharing it. Caffeine's project API reported `draftState: no_draft` even after the deploy; its platform agent confirmed the draft is serving and that the record is stale.
 
 ## Run the prototype
 
