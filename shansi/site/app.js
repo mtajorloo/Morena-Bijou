@@ -12,8 +12,8 @@
 
   /* ─ Media URLs generated with Higgsfield (Nano Banana · Seedance) ─ */
   const MEDIA = {
-    heroVideo: '',                       // filled by build: Seedance ambient loop
-    counterVideo: '',                    // Seedance counter turn (used on the draw stage if present)
+    heroVideo: 'https://d8j0ntlcm91z4.cloudfront.net/user_3F1VtchxdxeZzONSsRIyI88MO2d/hf_20260922_111245_33af8cd0-31e1-4b56-b373-b689ae2d7241.mp4', // Seedance 2.0 ambient loop (21:9, 8 s)
+    counterVideo: 'https://d8j0ntlcm91z4.cloudfront.net/user_3F1VtchxdxeZzONSsRIyI88MO2d/hf_20260922_111245_b9d8e13e-0097-4a30-9c34-a3f9ac81bf5b.mp4', // Seedance 2.0 counter turn (16:9, 6 s), start frame = Nano Banana counter render
   };
 
   /* ─ State ─ */

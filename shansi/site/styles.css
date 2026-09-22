@@ -151,7 +151,7 @@ body[data-view="draw"]    .view-draw { display: block; }
 .tier-prize { font-family: var(--font-digits); font-size: 1.5rem; letter-spacing: .05em; }
 
 .showcase { margin: 0 auto 2rem; max-width: 1100px; text-align: center; }
-.showcase img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid rgba(212,175,55,.2); }
+.showcase img, .showcase-video { width: 100%; display: block; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid rgba(212,175,55,.2); }
 .showcase figcaption { margin-top: .8rem; color: var(--cream-dim); font-family: var(--font-display); font-size: 1.15rem; font-style: italic; }
 
 /* ─── Cards / forms ──────────────────────────────────────────────────────── */

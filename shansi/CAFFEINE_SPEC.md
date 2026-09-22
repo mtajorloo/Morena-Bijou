@@ -42,9 +42,9 @@ Components: pill buttons; the primary button is a gold gradient with a soft gold
 ## Media (already generated; use these URLs)
 
 - Hero poster (21:9): https://d8j0ntlcm91z4.cloudfront.net/user_3F1VtchxdxeZzONSsRIyI88MO2d/hf_20260922_105831_9765a37d-e810-448b-9812-d6709835af68.png
-- Hero ambient loop video (21:9, mp4): {{HERO_VIDEO}}
+- Hero ambient loop video (21:9, mp4): https://d8j0ntlcm91z4.cloudfront.net/user_3F1VtchxdxeZzONSsRIyI88MO2d/hf_20260922_111245_33af8cd0-31e1-4b56-b373-b689ae2d7241.mp4
 - Counter showcase image (16:9): https://d8j0ntlcm91z4.cloudfront.net/user_3F1VtchxdxeZzONSsRIyI88MO2d/hf_20260922_105829_038dcdb5-68a3-406c-a641-4b9227b9c086.png
-- Counter turning video (16:9, mp4): {{COUNTER_VIDEO}}
+- Counter turning video (16:9, mp4): https://d8j0ntlcm91z4.cloudfront.net/user_3F1VtchxdxeZzONSsRIyI88MO2d/hf_20260922_111245_b9d8e13e-0097-4a30-9c34-a3f9ac81bf5b.mp4
 - Login icon (1:1): https://d8j0ntlcm91z4.cloudfront.net/user_3F1VtchxdxeZzONSsRIyI88MO2d/hf_20260922_105829_cebc3355-9066-4dfe-837f-8b8eb6a1936e.png
 - Wallet art (1:1): https://d8j0ntlcm91z4.cloudfront.net/user_3F1VtchxdxeZzONSsRIyI88MO2d/hf_20260922_105829_e3965a3c-b588-48f6-85b4-87683cf26849.png
 - Winner burst (16:9): https://d8j0ntlcm91z4.cloudfront.net/user_3F1VtchxdxeZzONSsRIyI88MO2d/hf_20260922_105830_f3c2c527-93a8-4f4f-8d9f-3e962284fb95.png
