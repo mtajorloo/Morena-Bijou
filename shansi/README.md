@@ -22,7 +22,9 @@ Caffeine AI built the full app from [`CAFFEINE_SPEC.md`](CAFFEINE_SPEC.md) (five
 | Draft frontend canister | `saxlv-eaaaa-aaaah-atbtq-cai` |
 | Draft backend canister | `rpbwc-ryaaa-aaaah-atzba-cai` |
 
-**Deployment status (2026-09-22):** the app was built (QA review and regression fixes passed) but **no draft has been deployed yet**. Every build stalled in Caffeine's automated runtime test before the deploy step, the composer's "preview is deployed" messages were wrong, and the platform reports "no deployed draft version" (so `redeploy_draft` also fails). The draft domain and token above therefore lead to an empty gate. A fresh build with lazy timer start and no init-time `raw_rand` has been requested with an explicit instruction to deploy even if the runtime test is incomplete. Once a draft exists, open it with the full link including the `#t=` fragment, or use the Preview button in the Caffeine dashboard; publish to live from the dashboard for a public URL.
+**Deployment status (2026-09-22, 16:36 UTC):** the draft is **deployed** (platform `draftState: deployed`, `lastDeployedDraftId: 1`). Open it with the full link above including the `#t=` fragment; if the canister-login page shows a field, enter the token. Publish to live from the Caffeine dashboard for a public URL.
+
+What it took: four earlier builds passed QA but never committed a deploy because Caffeine's automated preview test never finished. The cause was the hotlinked Higgsfield media on `d8j0ntlcm91z4.cloudfront.net`, which the test environment cannot reach, so the page never finished loading. The deployed build therefore uses a burgundy gradient hero, a CSS-drawn four-wheel counter, and gold SVG icons instead of the generated images and videos. To restore the Nano Banana and Seedance media, download the files in [`ASSETS.md`](ASSETS.md) and upload them as project assets in the Caffeine dashboard (or into `site/assets/` for the static prototype), rather than hotlinking them.
 
 ## Run the prototype
 
