@@ -22,7 +22,7 @@ Caffeine AI built the full app from [`CAFFEINE_SPEC.md`](CAFFEINE_SPEC.md) (five
 | Draft frontend canister | `saxlv-eaaaa-aaaah-atbtq-cai` |
 | Draft backend canister | `rpbwc-ryaaa-aaaah-atzba-cai` |
 
-Opening the draft: use the full link including the `#t=` fragment. If the canister-login page asks for a code, enter the token above. The Caffeine dashboard's Preview button issues a fresh token if this one expires. To get a public URL, publish the draft to live from the dashboard. Caffeine's automated runtime test never completed during the builds (the QA review and regression fixes did pass), so click through the draft once before sharing it. Caffeine's project API reported `draftState: no_draft` even after the deploy; its platform agent confirmed the draft is serving and that the record is stale.
+**Deployment status (2026-09-22):** the app was built (QA review and regression fixes passed) but **no draft has been deployed yet**. Every build stalled in Caffeine's automated runtime test before the deploy step, the composer's "preview is deployed" messages were wrong, and the platform reports "no deployed draft version" (so `redeploy_draft` also fails). The draft domain and token above therefore lead to an empty gate. A fresh build with lazy timer start and no init-time `raw_rand` has been requested with an explicit instruction to deploy even if the runtime test is incomplete. Once a draft exists, open it with the full link including the `#t=` fragment, or use the Preview button in the Caffeine dashboard; publish to live from the dashboard for a public URL.
 
 ## Run the prototype
 
