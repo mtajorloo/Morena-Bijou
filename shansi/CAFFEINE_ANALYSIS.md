@@ -20,7 +20,11 @@ Technical post-mortem of the SHANSI build on Caffeine AI (project `01a0c8cc-6459
 3. **Published, but wrong design.** The user published the draft to https://shansi-9kc.caffeine.xyz. The result was the composer's own interpretation of the spec, not the agreed prototype: different layout and interactions. This is a pipeline property, not a bug: Caffeine generates from a description and does not copy existing UI code, and it could not receive the code in chat.
 4. **"Faithful port" rebuild (17:10 UTC).** Caffeine was pointed at the raw GitHub files of `site/` and asked to port them one-to-one. It reported all five screens built and matching, build check passed, review and publish pending. Before that draft could be verified and published, the connector token expired and the user reported "same error, no improvement" (the live domain was still serving the earlier version).
 5. **What the platform record shows now (30 Sep, connector reauthorized).** `draftState: deployed`, `lastDeployedDraftId: 2`, `liveDraftId: 1`. So the "faithful port" did reach a deployed draft (draft 2), but the live domain was never switched to it. The owner's "same error, no improvement" was the live site still serving draft 1. Publishing a draft to live is a dashboard action Caffeine's chat did not perform.
-6. **Port from the Lovable source started (30 Sep 09:44 UTC).** A new chat session was given the brief in `CAFFEINE_PORT_MESSAGE.md`; it targets draft 3.
+6. **Port from the Lovable source (30 Sep, 09:44 to 10:07 UTC): success.** A new chat session was given the brief in `CAFFEINE_PORT_MESSAGE.md`. Caffeine fetched the six reference files, ported them, downloaded all five media files into the app, compiled, ran its runtime test ("Testing preview" passed this time because nothing was hotlinked), and deployed draft version 3 at 10:03 UTC. Version 3 was then launched to production at 10:07 UTC (`liveDraftId: 3`). Live URL: https://shansi-9kc.caffeine.xyz.
+
+## 5. What made the difference
+
+The same platform that failed four times succeeded in one pass once three inputs changed: a verbatim React reference it could fetch (instead of a spec to interpret), media bundled into the canister (instead of hotlinks that stalled the runtime test), and a brief that forbade clarification and asked for the platform record, not the composer's summary. The pipeline itself was never the obstacle; its inputs were.
 
 ## 3. The three real blockers, in order of impact
 

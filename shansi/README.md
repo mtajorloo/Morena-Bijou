@@ -12,6 +12,7 @@ Hourly game-of-chance website. Burgundy and gold. One flow: log in → top up �
 | Why Caffeine failed, step by step | [`CAFFEINE_ANALYSIS.md`](CAFFEINE_ANALYSIS.md) |
 | Ready-to-send Caffeine port brief | [`CAFFEINE_PORT_MESSAGE.md`](CAFFEINE_PORT_MESSAGE.md) |
 | Caffeine project | **SHANSI** · project id `01a0c8cc-6459-76dd-9217-57c65db6df53` (Internet Computer, Motoko backend) |
+| Caffeine live site (v3, ported from the Lovable build) | https://shansi-9kc.caffeine.xyz |
 | Caffeine draft preview | https://potential-purple-imk-draft.caffeine.xyz/canister-login.html#t=ZISJE8Wyx9p7 |
 | Lovable project (current build) | https://lovable.dev/projects/88ce5bcf-1a22-4066-9ad0-93c6a2921b90 · preview https://id-preview--88ce5bcf-1a22-4066-9ad0-93c6a2921b90.lovable.app |
 | Replit app (current build) | https://replit.com/@mtajorloo/PracticalCylindricalComputationallinguistics · id `3f07774a-312f-472c-9f10-a5dd4b2d335a` |
@@ -28,6 +29,11 @@ The Caffeine output never matched the agreed design and the Caffeine connector's
 **Lovable result.** One build pass produced the whole app: `src/lib/shansi-game.ts` (typed state, localStorage persistence, right-to-left matching, prize tiers, jackpot floor and rollover, Daily Drop, SHA-256 seed commit and reveal) and `src/components/ShansiApp.tsx` (top bar, five views, dials with arrows/drag/wheel, quick pick, 1 to 50 ticket stepper, four-wheel counter with staggered spin and right-to-left lock, result overlay with matched-digit highlighting and confetti, footer dialogs). The Higgsfield hero video, poster, counter clip, login icon and wallet art were fetched into Lovable assets, so the published site uses the generated media. The agent left some TypeScript type errors in `ShansiApp.tsx`; they do not affect the build or runtime because the build is plain `vite build`, but the workspace (free plan) ran out of credits before the clean-up and verification pass, so that pass needs credits added at https://lovable.dev/settings/billing.
 
 ## Caffeine deployment
+
+**Live (2026-09-30, 10:07 UTC): version 3 at https://shansi-9kc.caffeine.xyz.** Version 3 is a one-to-one port of the Lovable build in [`lovable-export/`](lovable-export/README.md) (same components, styles, game logic, and the five Higgsfield media files downloaded into the frontend canister instead of hotlinked). The pipeline passed all five stages (baseline tests, port, media, verify with runtime test, draft deploy) in 19 minutes, and the platform record reads `draftState: deployed`, `lastDeployedDraftId: 3`, `liveDraftId: 3`. Draft canisters for v3: frontend `wom4l-xiaaa-aaaap-qqvpq-cai`, backend `tzc4k-fyaaa-aaaap-qqgya-cai`. The brief that produced it is [`CAFFEINE_PORT_MESSAGE.md`](CAFFEINE_PORT_MESSAGE.md); the post-mortem of the earlier failures is [`CAFFEINE_ANALYSIS.md`](CAFFEINE_ANALYSIS.md).
+
+### Earlier history (22 Sep)
+
 
 Caffeine AI built the full app from [`CAFFEINE_SPEC.md`](CAFFEINE_SPEC.md) (five screens, Motoko game engine with hourly `raw_rand` draws, Internet Identity + email login, demo-credit wallet, admin "Run draw now") and deployed it as a **draft**. The follow-up message with the two Seedance video URLs was applied and redeployed.
 
