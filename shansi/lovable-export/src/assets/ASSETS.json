@@ -1,0 +1,12 @@
+{
+  "note": "Lovable stored the Higgsfield media as project assets. The published site serves them at these URLs. The originals are listed in ../../ASSETS.md (cloudfront).",
+  "base": "https://shansi.lovable.app",
+  "assets": {
+    "shansi-hero.mp4": "/__l5e/assets-v1/0ed2824b-2826-406e-bcb4-6de9d328466f/shansi-hero.mp4",
+    "shansi-hero-poster.png": "/__l5e/assets-v1/a518f6b6-2e08-4bba-aabf-047b6feb0069/shansi-hero-poster.png",
+    "shansi-counter.mp4": "/__l5e/assets-v1/3b1a0827-5daa-459f-aaa0-0745770616f8/shansi-counter.mp4",
+    "shansi-login.png": "/__l5e/assets-v1/8941edcb-5e3a-41fe-a2d2-76237fd8f38c/shansi-login.png",
+    "shansi-wallet.png": "/__l5e/assets-v1/a45946d4-7109-4803-9774-c741056df8b4/shansi-wallet.png"
+  },
+  "imports_in_ShansiApp": "import heroVideo from '@/assets/shansi-hero.mp4.asset.json' etc. Each JSON has a `url` field; in another stack replace these with a plain object { url: '/assets/<file>' } pointing at a locally bundled copy."
+}
