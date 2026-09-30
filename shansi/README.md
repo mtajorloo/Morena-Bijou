@@ -19,8 +19,10 @@ The Caffeine output never matched the agreed design and the Caffeine connector's
 
 | Platform | Project | Status |
 |---|---|---|
-| Lovable | project `88ce5bcf-1a22-4066-9ad0-93c6a2921b90`, workspace "Morteza's Lovable" | build started 08:25 UTC |
+| Lovable | project `88ce5bcf-1a22-4066-9ad0-93c6a2921b90`, workspace "Morteza's Lovable" | **Published** at https://shansi.lovable.app (08:34 UTC). Editor: https://lovable.dev/projects/88ce5bcf-1a22-4066-9ad0-93c6a2921b90 |
 | Replit | app `3f07774a-312f-472c-9f10-a5dd4b2d335a` | build started 08:25 UTC |
+
+**Lovable result.** One build pass produced the whole app: `src/lib/shansi-game.ts` (typed state, localStorage persistence, right-to-left matching, prize tiers, jackpot floor and rollover, Daily Drop, SHA-256 seed commit and reveal) and `src/components/ShansiApp.tsx` (top bar, five views, dials with arrows/drag/wheel, quick pick, 1 to 50 ticket stepper, four-wheel counter with staggered spin and right-to-left lock, result overlay with matched-digit highlighting and confetti, footer dialogs). The Higgsfield hero video, poster, counter clip, login icon and wallet art were fetched into Lovable assets, so the published site uses the generated media. The agent left some TypeScript type errors in `ShansiApp.tsx`; they do not affect the build or runtime because the build is plain `vite build`, but the workspace (free plan) ran out of credits before the clean-up and verification pass, so that pass needs credits added at https://lovable.dev/settings/billing.
 
 ## Caffeine deployment
 
