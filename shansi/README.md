@@ -5,6 +5,7 @@ Hourly game-of-chance website. Burgundy and gold. One flow: log in → top up �
 | Item | Where |
 |---|---|
 | Business plan | [`BUSINESS_PLAN.md`](BUSINESS_PLAN.md) |
+| Owner control model, admin back office, real-money architecture | [`OPERATIONS_AND_ADMIN.md`](OPERATIONS_AND_ADMIN.md) |
 | Site design (static prototype) | [`site/index.html`](site/index.html), [`site/styles.css`](site/styles.css), [`site/app.js`](site/app.js) |
 | Spec sent to Caffeine AI | [`CAFFEINE_SPEC.md`](CAFFEINE_SPEC.md) |
 | Generated media (Nano Banana · Seedance via Higgsfield) | [`ASSETS.md`](ASSETS.md) |
