@@ -1,0 +1,63 @@
+import * as React from "react";
+import { Slot } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "class-variance-authority";
+
+import { cn } from "@/lib/utils";
+
+const buttonVariants = cva(
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium cursor-pointer transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  {
+    variants: {
+      variant: {
+        default: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
+        destructive: "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
+        outline:
+          "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
+        secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline",
+        gold: "rounded-full bg-gold text-ink font-bold shadow-gold hover:-translate-y-0.5 hover:brightness-105",
+        outlineGold: "rounded-full border border-gold/60 bg-transparent text-gold-light font-bold hover:-translate-y-0.5 hover:bg-gold/10",
+        ghostGold: "rounded-full bg-cream/6 text-cream font-bold hover:-translate-y-0.5 hover:bg-cream/12",
+        avatar: "rounded-full bg-gold text-ink font-bold shadow-gold hover:-translate-y-0.5",
+        brand: "bg-transparent p-0 text-cream hover:text-gold-light",
+        payment: "h-auto min-h-24 flex-col whitespace-normal rounded-xl border border-cream/10 bg-ink/25 px-3 py-4 text-cream data-[active=true]:border-gold data-[active=true]:bg-gold/10",
+        chip: "rounded-full border border-cream/10 bg-ink/25 text-cream data-[active=true]:border-gold data-[active=true]:bg-gold/10 data-[active=true]:text-gold-light",
+        segment: "rounded-full bg-transparent text-cream-dim data-[active=true]:bg-gold data-[active=true]:text-ink",
+        iconGhost: "rounded-lg bg-cream/6 text-gold hover:bg-gold/20",
+        linkGold: "h-auto bg-transparent p-0 text-cream-dim hover:text-gold-light",
+      },
+      size: {
+        default: "h-9 px-4 py-2",
+        sm: "h-8 rounded-md px-3 text-xs",
+        lg: "h-10 rounded-md px-8",
+        icon: "h-9 w-9",
+        iconLg: "h-10 w-10",
+        xl: "min-h-14 rounded-full px-7 py-3 text-base",
+        brand: "h-10",
+        inline: "h-auto p-0",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  },
+);
+
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {
+  asChild?: boolean;
+}
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button";
+    return (
+      <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />
+    );
+  },
+);
+Button.displayName = "Button";
+
+export { Button, buttonVariants };

@@ -1,0 +1,37 @@
+# Why Caffeine could not publish what Lovable published
+
+Technical post-mortem of the SHANSI build on Caffeine AI (project `01a0c8cc-6459-76dd-9217-57c65db6df53`), compared step by step with the Lovable build that went live at https://shansi.lovable.app in one pass on 2026-09-30.
+
+## 1. What each platform actually does when it "builds"
+
+| Step | Lovable | Caffeine |
+|---|---|---|
+| Where the agent works | A live dev sandbox with a shell and outbound network. It ran `curl` on the four reference files and the five media files, saved the media as project assets on its own CDN, and edited the code directly. | A "composer" that plans from a written spec, then generates a Motoko backend and a React frontend through Caffeine's own pipeline. It has no general shell; it never downloaded or mirrored the media, so hotlinks stayed hotlinks. |
+| How code is transferred | Message limit 100 KB, plus the agent can fetch any URL. The whole prototype was read verbatim. | Chat limit about 13 KB (`chat_message_too_long` at 52 KB and again at 13 KB). The prototype could only be pointed at by URL, and the composer reinterpreted it rather than porting it. |
+| When a preview exists | Immediately: the preview is the Vite dev server, live as soon as the code compiles. | Only after the full pipeline: Motoko compile, frontend build, deploy to two canisters, then an automated runtime test of the page in a headless browser, then commit. A hang anywhere blocks the draft entirely. |
+| How publishing works | `deploy_project` runs `vite build` and uploads static files. Type errors do not block it. | Draft must pass the runtime test and be committed (`draftState: deployed`) before the dashboard can publish it to the live domain. |
+| Viewing the draft | Public preview URL, no gate. | Draft domain behind a `canister-login` page that needs the `#t=` token from the URL fragment. |
+| Session auth | OAuth stayed valid for the whole session. | OAuth token expired mid-build (HTTP 401, then "needs you to sign in again"). A non-interactive session cannot re-authorize the connector. |
+
+## 2. Timeline of the Caffeine attempts
+
+1. **Builds 1 to 4 (22 Sep): spec sent, QA passed, no draft.** Each build ended in "Testing preview" and stopped on the build budget. The composer reported "the preview is deployed", but the platform record said `draftState: no_draft`, and `redeploy_draft` failed with "no deployed draft version" because that tool only restores an existing draft. The user saw either nothing or the canister-login gate.
+2. **Root cause found.** The frontend hotlinked the Higgsfield media on `d8j0ntlcm91z4.cloudfront.net`. Caffeine's runtime-test environment cannot reach that host, so the page never reached a loaded state and the test never finished. Confirmed by rebuilding with no external media (gradient hero, CSS counter, SVG icons): the test passed and the draft deployed (`lastDeployedDraftId: 1`).
+3. **Published, but wrong design.** The user published the draft to https://shansi-9kc.caffeine.xyz. The result was the composer's own interpretation of the spec, not the agreed prototype: different layout and interactions. This is a pipeline property, not a bug: Caffeine generates from a description and does not copy existing UI code, and it could not receive the code in chat.
+4. **"Faithful port" rebuild (17:10 UTC).** Caffeine was pointed at the raw GitHub files of `site/` and asked to port them one-to-one. It reported all five screens built and matching, build check passed, review and publish pending. Before that draft could be verified and published, the connector token expired and the user reported "same error, no improvement" (the live domain was still serving the earlier version).
+5. **Now.** The Caffeine connector shows `connect_incomplete` / not connected in this session, so nothing can be sent to it until it is reauthorized.
+
+## 3. The three real blockers, in order of impact
+
+1. **The runtime-test gate plus hotlinked media.** Anything the test browser cannot load hangs the draft. Lovable has no such gate, and it mirrored the media anyway.
+2. **Generation instead of porting.** Caffeine rebuilds from a spec each time, so every iteration drifted. Lovable read the code and ported it, then did one implementation pass.
+3. **Chat size limit and session auth.** The code could not be pasted, and the OAuth token did not survive the build.
+
+## 4. Fix plan (repeatable, one step at a time)
+
+1. **Reauthorize the Caffeine connector** at https://claude.ai/customize/connectors, then start a new session so the tools load.
+2. **Read the project state** (`draftState`, `lastDeployedDraftId`, current live version) before changing anything.
+3. **Give Caffeine a verbatim reference it can fetch:** the Lovable source now lives in this repo at `shansi/lovable-export/` (public raw URLs). It is plain React, which is Caffeine's own frontend stack, so it can be copied file for file. The ready-to-send brief is in `CAFFEINE_PORT_MESSAGE.md`.
+4. **Media without hotlinks.** Caffeine must copy the five files into the frontend canister's assets at build time (from the cloudfront or shansi.lovable.app URLs listed in `lovable-export/src/assets/ASSETS.json`) or fall back to the CSS-only versions. This is the single rule that keeps the runtime test from hanging.
+5. **Verify each stage on the platform record, not the composer's chat:** `begin_draft` → `commit_and_deploy_draft` → confirm `draftState: deployed` and a new `lastDeployedDraftId` → open the draft with its `#t=` token → publish from the dashboard → confirm the live domain serves the new build (the counter with four gold wheels on the Draw screen is the visual check).
+6. **Keep the Motoko backend minimal for the demo** (tickets, draws, `raw_rand` seed commit) or leave the game logic client-side as in the Lovable build; wire real Internet Identity only once the frontend matches.
