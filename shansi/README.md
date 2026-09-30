@@ -10,6 +10,17 @@ Hourly game-of-chance website. Burgundy and gold. One flow: log in → top up �
 | Generated media (Nano Banana · Seedance via Higgsfield) | [`ASSETS.md`](ASSETS.md) |
 | Caffeine project | **SHANSI** · project id `01a0c8cc-6459-76dd-9217-57c65db6df53` (Internet Computer, Motoko backend) |
 | Caffeine draft preview | https://potential-purple-imk-draft.caffeine.xyz/canister-login.html#t=ZISJE8Wyx9p7 |
+| Lovable project (current build) | https://lovable.dev/projects/88ce5bcf-1a22-4066-9ad0-93c6a2921b90 · preview https://id-preview--88ce5bcf-1a22-4066-9ad0-93c6a2921b90.lovable.app |
+| Replit app (current build) | https://replit.com/@mtajorloo/PracticalCylindricalComputationallinguistics · id `3f07774a-312f-472c-9f10-a5dd4b2d335a` |
+
+## Lovable and Replit builds (2026-09-30)
+
+The Caffeine output never matched the agreed design and the Caffeine connector's authorisation expired, so the owner asked for the game to be rebuilt with the Lovable and Replit connectors from the original idea. Both agents were given the same brief: port the static prototype in `site/` one-to-one (the raw GitHub files of this branch are the reference), the palette tokens and fonts, the five-screen flow, email or Internet Identity sign-in, USDT / Visa / Mastercard demo top-ups, the four dials, the hourly split-flap counter with a "Run demo draw" button, the prize tiers, localStorage persistence and the optional Higgsfield media with CSS fallbacks.
+
+| Platform | Project | Status |
+|---|---|---|
+| Lovable | project `88ce5bcf-1a22-4066-9ad0-93c6a2921b90`, workspace "Morteza's Lovable" | build started 08:25 UTC |
+| Replit | app `3f07774a-312f-472c-9f10-a5dd4b2d335a` | build started 08:25 UTC |
 
 ## Caffeine deployment
 
